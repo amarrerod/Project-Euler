@@ -1,3 +1,4 @@
+mod palindrome;
 mod problems;
 use problems::*;
 fn main() {
@@ -6,5 +7,6 @@ fn main() {
     result = problems::even_fibonacci_numbers();
     let mut number: i64 = 600851475143;
     let prime_result = problems::largest_prime_factor(&mut number).expect("Not found");
-    println!("{}", prime_result);
+    let result_palindrome = palindrome::largest_palindrome_product();
+    println!("{}", result_palindrome);
 }
