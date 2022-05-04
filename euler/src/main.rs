@@ -2,7 +2,9 @@ mod problems;
 use problems::*;
 fn main() {
     println!("Hello, world!");
-    let result = problems::multiples_of_3_or_5(1000);
-    let result = problems::even_fibonacci_numbers();
-    println!("{}", result);
+    let mut result = problems::multiples_of_3_or_5(1000);
+    result = problems::even_fibonacci_numbers();
+    let mut number: i64 = 600851475143;
+    let prime_result = problems::largest_prime_factor(&mut number).expect("Not found");
+    println!("{}", prime_result);
 }

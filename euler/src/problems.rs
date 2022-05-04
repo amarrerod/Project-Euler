@@ -20,3 +20,20 @@ pub fn even_fibonacci_numbers() -> i32 {
     let sum = seq.iter().filter(|x| *x % 2 == 0).sum();
     sum
 }
+
+pub fn largest_prime_factor(n: &mut i64) -> Option<i64> {
+    let mut terms = vec![];
+    let mut d = 2;
+    while (d * d) <= *n {
+        while *n % d == 0 {
+            terms.push(d);
+            *n /= d;
+        }
+        d += 1;
+    }
+    if *n > 1 {
+        terms.push(*n);
+    }
+    terms.sort();
+    terms.pop()
+}
