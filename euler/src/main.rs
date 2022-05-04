@@ -7,6 +7,7 @@ fn main() {
     result = problems::even_fibonacci_numbers();
     let mut number: i64 = 600851475143;
     let prime_result = problems::largest_prime_factor(&mut number).expect("Not found");
-    let result_palindrome = palindrome::largest_palindrome_product();
-    println!("{}", result_palindrome);
+    //let result_palindrome = palindrome::largest_palindrome_product();
+    let smallest = problems::evenly_divisible();
+    println!("{}", smallest);
 }

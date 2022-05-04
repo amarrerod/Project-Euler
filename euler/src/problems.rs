@@ -37,3 +37,30 @@ pub fn largest_prime_factor(n: &mut i64) -> Option<i64> {
     terms.sort();
     terms.pop()
 }
+
+/**
+ * 2520 is the smallest number that can be divided
+ * by each of the numbers from 1 to 10 without any remainder.
+ * What is the smallest positive number that is evenly divisible
+ * by all of the numbers from 1 to 20?
+ */
+
+fn _is_divisible(n: i32) -> bool {
+    for i in 1..=20 {
+        if n % i != 0 {
+            return false;
+        }
+    }
+    true
+}
+
+pub fn evenly_divisible() -> i32 {
+    let mut smallest = i32::MAX;
+    for i in 20..i32::MAX {
+        if _is_divisible(i) && i < smallest {
+            smallest = i;
+            println!("Smallest is now: {}", smallest);
+        }
+    }
+    smallest
+}
