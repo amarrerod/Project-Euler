@@ -8,6 +8,7 @@ fn main() {
     let mut number: i64 = 600851475143;
     let prime_result = problems::largest_prime_factor(&mut number).expect("Not found");
     //let result_palindrome = palindrome::largest_palindrome_product();
-    let smallest = problems::evenly_divisible();
-    println!("{}", smallest);
+    // let smallest = problems::evenly_divisible();
+    let square_diff = problems::sum_square_difference();
+    println!("{}", square_diff);
 }
