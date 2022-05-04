@@ -79,3 +79,27 @@ pub fn sum_square_difference() -> i32 {
     square_sum *= square_sum;
     square_sum - sum_of_squares
 }
+
+fn _is_prime(n: i32) -> bool {
+    for i in (2..n-1).rev() {
+        if n % i == 0 {
+            return false;
+        }
+    }
+    true
+}
+
+pub fn find_prime_in_position(limit: i32) -> i32 {
+    let mut counter = 0;
+    let mut last_prime = 2;
+    let mut number = 2;
+    while counter != limit {
+        if _is_prime(number) {
+            last_prime = number;
+            counter += 1;
+            println!("Prime number {} is {}", counter, last_prime);
+        }
+        number += 1;
+    }
+    last_prime
+}

@@ -10,5 +10,6 @@ fn main() {
     //let result_palindrome = palindrome::largest_palindrome_product();
     // let smallest = problems::evenly_divisible();
     let square_diff = problems::sum_square_difference();
-    println!("{}", square_diff);
+    let last_prime = problems::find_prime_in_position(1000001);
+    println!("{}", last_prime);
 }
