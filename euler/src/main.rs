@@ -14,5 +14,6 @@ fn main() {
     let smallest = problems::evenly_divisible(); */
     let adjancent_sum = adjacents::solve_8_problem("src/data.txt");
     println!("sum is {}", adjancent_sum);
-    // println!("{}", smallest);
+    let sum_of_primes = problems::sum_of_primes();
+    println!("{}", sum_of_primes);
 }
