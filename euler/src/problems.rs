@@ -1,3 +1,5 @@
+use factor::factor_include;
+
 pub fn multiples_of_3_or_5(limit: i32) -> i32 {
     let sum = (0..limit).filter(|x| x % 3 == 0 || x % 5 == 0).sum();
     sum
@@ -90,4 +92,16 @@ pub fn sum_of_primes() -> i128 {
     let limit: i128 = 2000000;
     let sum = (2..=limit).filter(|x| _is_prime(&x)).sum();
     sum
+}
+
+pub fn highly_divisible_triangular() -> i64 {
+    let mut factors: Vec<i64> = vec![];
+    let mut number = 1;
+    let mut iteration = 1;
+    while factors.len() < 500 {
+        number = (iteration * (iteration + 1)) / 2;
+        factors = factor_include::factor_include(number);
+        iteration += 1;
+    }
+    number
 }
