@@ -20,4 +20,8 @@ fn main() {
     //println!("{}", sum_of_primes);
     let result = problems::highly_divisible_triangular();
     println!("{}", result);
+    // let smallest = problems::evenly_divisible();
+    let square_diff = problems::sum_square_difference();
+    let last_prime = problems::find_prime_in_position(1000001);
+    println!("{}", last_prime);
 }

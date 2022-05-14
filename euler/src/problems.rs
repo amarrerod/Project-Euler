@@ -105,3 +105,33 @@ pub fn highly_divisible_triangular() -> i64 {
     }
     number
 }
+/**
+*   The sum of the squares of the first ten natural numbers is,
+*   The square of the sum of the first ten natural numbers is,
+*   Hence the difference between the sum of the squares of the
+*   first ten natural numbers and the square of the sum is.
+*   Find the difference between the sum of the squares of
+*   the first one hundred natural numbers and the square of the sum.
+*/
+pub fn sum_square_difference() -> i32 {
+    let nums: Vec<i32> = (1..=100).collect();
+    let sum_of_squares: i32 = nums.iter().map(|x| x * x).sum();
+    let mut square_sum: i32 = nums.iter().sum();
+    square_sum *= square_sum;
+    square_sum - sum_of_squares
+}
+
+pub fn find_prime_in_position(limit: i32) -> i128 {
+    let mut counter = 0;
+    let mut last_prime = 2;
+    let mut number = 2;
+    while counter != limit {
+        if _is_prime(&number) {
+            last_prime = number;
+            counter += 1;
+            println!("Prime number {} is {}", counter, last_prime);
+        }
+        number += 1;
+    }
+    last_prime
+}
